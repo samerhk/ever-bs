@@ -6,7 +6,7 @@
 <!--                <attribute name="class">navbar navbar-expand-md navbar-light bg-light yamm</attribute>-->
 <!--            </xpath>-->
             <xpath expr="//nav[hasclass('navbar','navbar-expand-md','navbar-light','bg-light')]/div" position="inside">
-                <img src="/web_openeducat/static/src/img/odoo_gold.png" class="gold-logo"/>
+                <img src="/website_ever/static/src/img/odoo_gold.png" class="gold-logo"/>
             </xpath>
         </template>
 
