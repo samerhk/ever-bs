@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <template id="frontend_layout_inherit" inherit_id="portal.frontend_layout">
+<!--            <xpath expr="//nav[hasclass('navbar','navbar-expand-md','navbar-light','bg-light')]" position="attributes">-->
+<!--                <attribute name="class">navbar navbar-expand-md navbar-light bg-light yamm</attribute>-->
+<!--            </xpath>-->
+            <xpath expr="//nav[hasclass('navbar','navbar-expand-md','navbar-light','bg-light')]/div" position="inside">
+                <img src="/website_ever/static/src/img/odoo_gold.png" class="gold-logo"/>
+            </xpath>
+        </template>
+
+        <template id="top_navbar_mid_menu" inherit_id="website.layout" name="Header Layout Menu">
+            <xpath expr="//nav[hasclass('navbar','navbar-expand-md','navbar-light','bg-light')]" position="before">
+                <div class="oe_structure">
+                    <div id="custom-pre-header">
+                        <div class="container">
+                            <nav class="header-nav-top">
+                                <div id="social">
+                                    <a href="https://www.ever-bs.com/news" class="menu">
+                                        News
+                                    </a>
+                                    <a href="https://www.ever-bs.com/blog" class="menu">
+                                        Blog
+                                    </a>
+                                    <a href="https://www.ever-bs.com/contactus" class="menu">
+                                        Contact us
+                                    </a>
+                                    <a href="https://www.ever-bs.com/helpdesk/" class="menu">
+                                        Support
+                                    </a>
+                                    <a href="https://www.facebook.com" target="_blank">
+                                        <i class="fa fa-facebook fa-1x img-circle"></i>
+                                    </a>
+                                    <a href="https://twitter.com" target="_blank">
+                                        <i class="fa fa-twitter fa-1x img-circle"></i>
+                                    </a>
+                                    <a href="https://plus.google.com/" target="_blank">
+                                        <i class="fa fa-google-plus fa-1x img-circle"></i>
+                                    </a>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </xpath>
+        </template>
+
+<!--        <template id="website.submenu" name="Submenu">-->
+<!--            <t t-set="has_visible_submenu" t-value="submenu.child_id.filtered(lambda menu: menu.is_visible)"/>-->
+<!--            <t t-set="sequence" t-value="submenu.sequence"/>-->
+<!--            <li t-if="submenu.is_visible and not has_visible_submenu" t-attf-class="#{item_class or ''}">-->
+<!--                <a t-att-href="submenu.clean_url()"-->
+<!--                   t-attf-class="#{link_class or ''} #{'active' if submenu.clean_url() and unslug_url(request.httprequest.path) == unslug_url(submenu.clean_url()) else ''}"-->
+<!--                   role="menuitem"-->
+<!--                   t-ignore="true"-->
+<!--                   t-att-target="'_blank' if submenu.new_window else None">-->
+<!--                    <span t-field="submenu.name"/>-->
+<!--                </a>-->
+<!--            </li>-->
+<!--&lt;!&ndash;            <t t-if="sequence == 1 and item_class =='nav-item' " t-call="web_openeducat.feature_openeducat"/>&ndash;&gt;-->
+<!--            <li t-if="has_visible_submenu" t-attf-class="#{item_class or ''} dropdown #{-->
+<!--        (submenu.clean_url() and submenu.clean_url() != '/' and any([request.httprequest.path == child.url for child in submenu.child_id if child.url]) or-->
+<!--         (submenu.clean_url() and request.httprequest.path == submenu.clean_url())) and 'active'-->
+<!--        }">-->
+<!--                <a t-attf-class="#{link_class or ''} dropdown-toggle" data-toggle="dropdown" href="#">-->
+<!--                    <span t-field="submenu.name"/>-->
+<!--                </a>-->
+<!--                <ul class="dropdown-menu" role="menu">-->
+<!--                    <t t-foreach="submenu.child_id" t-as="submenu">-->
+<!--                        <t t-call="website.submenu">-->
+<!--                            <t t-set="item_class" t-value="None"/>-->
+<!--                            <t t-set="link_class" t-value="'dropdown-item'"/>-->
+<!--                        </t>-->
+<!--                    </t>-->
+<!--                </ul>-->
+<!--            </li>-->
+<!--        </template>-->
+
+<!--        <template id="feature_openeducat" name="Features">-->
+<!--            <li class="dropdown nav-item yamm-fw">-->
+<!--                <a href="/"-->
+<!--                   class="dropdown-toggle nav-link" data-toggle="dropdown">-->
+<!--                    <span onclick="window.location.href = 'https://www.ever-bs.com/products';">Products</span>-->
+<!--                </a>-->
+<!--                <ul class="dropdown-menu" role="menu" id='ul01'>-->
+<!--                    <div class="yamm-content">-->
+<!--                        <div class="row features">-->
+<!--                            <div class="col-lg-12 mt16">-->
+<!--                                <div class="col-lg-12 ">-->
+<!--                                    <div class="row">-->
+<!--                                        <div class="col-lg-4">-->
+<!--                                            <ul class="list-unstyled mb32">-->
+<!--                                                <li class="btm-li-border">-->
+<!--                                                    <h5>-->
+<!--                                                        <strong>-->
+<!--                                                            Operations-->
+<!--                                                        </strong>-->
+<!--                                                    </h5>-->
+<!--                                                </li>-->
+<!--                                                <li class="li-bo-border">-->
+<!--                                                    <i-->
+<!--                                                            class="fa fa-child i-bo-pad fa-li-po pr8"/>-->
+<!--                                                    <a-->
+<!--                                                            href="https://www.ever-bs.com/products/accounting">-->
+<!--                                                        Accounting-->
+<!--                                                    </a>-->
+<!--                                                </li>-->
+<!--                                                <li class="li-bo-border">-->
+<!--                                                    <i-->
+<!--                                                            class="fa fa-shopping-cart i-bo-pad fa-li-po pr8"/>-->
+<!--                                                    <a-->
+<!--                                                            href="https://www.ever-bs.com/products/purchase">-->
+<!--                                                        Purchase-->
+<!--                                                    </a>-->
+<!--                                                </li>-->
+<!--                                                <li class="li-bo-border">-->
+<!--                                                    <i-->
+<!--                                                            class="fa fa-archive i-bo-pad fa-li-po pr8"/>-->
+<!--                                                    <a-->
+<!--                                                            href="https://www.ever-bs.com/products/inventory">-->
+<!--                                                        Inventory-->
+<!--                                                    </a>-->
+<!--                                                </li>-->
+
+<!--                                                <li class="li-bo-border">-->
+<!--                                                    <i-->
+<!--                                                            class="fa fa-info-circle i-bo-pad fa-li-po pr8"/>-->
+<!--                                                    <a-->
+<!--                                                            href="https://www.ever-bs.com/products/helpdesk">-->
+<!--                                                        Helpdesk-->
+<!--                                                    </a>-->
+<!--                                                </li>-->
+<!--                                                <li class="li-bo-border">-->
+<!--                                                    <i-->
+<!--                                                            class="fa fa-tasks i-bo-pad fa-li-po pr8"/>-->
+<!--                                                    <a-->
+<!--                                                            href="https://www.ever-bs.com/products/projects">-->
+<!--                                                        Projects-->
+<!--                                                    </a>-->
+<!--                                                </li>-->
+<!--                                                <li class="li-bo-border">-->
+<!--                                                    <i-->
+<!--                                                            class="fa fa-users i-bo-pad fa-li-po pr8"/>-->
+<!--                                                    <a-->
+<!--                                                            href="https://www.ever-bs.com/products/hr">-->
+<!--                                                        Human Resources and Payroll-->
+<!--                                                    </a>-->
+<!--                                                </li>-->
+<!--                                                &lt;!&ndash;                                                <li class="li-bo-border">&ndash;&gt;-->
+<!--                                                &lt;!&ndash;                                                    <i&ndash;&gt;-->
+<!--                                                &lt;!&ndash;                                                            class="fa fa-paypal i-bo-pad fa-li-po pr8"/>&ndash;&gt;-->
+<!--                                                &lt;!&ndash;                                                    <a&ndash;&gt;-->
+<!--                                                &lt;!&ndash;                                                            href="https://www.ever-bs.com/products/payroll">&ndash;&gt;-->
+<!--                                                &lt;!&ndash;                                                        Payroll&ndash;&gt;-->
+<!--                                                &lt;!&ndash;                                                    </a>&ndash;&gt;-->
+<!--                                                &lt;!&ndash;                                                </li>&ndash;&gt;-->
+<!--                                                <li class="li-bo-border">-->
+<!--                                                    <i-->
+<!--                                                            class="fa fa-car i-bo-pad fa-li-po pr8"/>-->
+<!--                                                    <a-->
+<!--                                                            href="https://www.ever-bs.com/products/fleet">-->
+<!--                                                        Fleet-->
+<!--                                                    </a>-->
+<!--                                                </li>-->
+<!--                                                <li class="li-bo-border">-->
+<!--                                                    <i-->
+<!--                                                            class="fa fa-file i-bo-pad fa-li-po pr8"/>-->
+<!--                                                    <a-->
+<!--                                                            href="https://www.ever-bs.com/products/documents">-->
+<!--                                                        Documents-->
+<!--                                                    </a>-->
+<!--                                                </li>-->
+<!--                                                <li class="li-bo-border">-->
+<!--                                                    <i-->
+<!--                                                            class="fa fa-pencil i-bo-pad fa-li-po pr8"/>-->
+<!--                                                    <a-->
+<!--                                                            href="https://www.ever-bs.com/products/signature">-->
+<!--                                                        Signature-->
+<!--                                                    </a>-->
+<!--                                                </li>-->
+<!--                                            </ul>-->
+<!--                                        </div>-->
+<!--                                        <div class="col-lg-4">-->
+<!--                                            <ul class="list-unstyled mb32">-->
+<!--                                                <li class="btm-li-border">-->
+<!--                                                    <h5>-->
+<!--                                                        <strong>-->
+<!--                                                            Sales and Marketing-->
+<!--                                                        </strong>-->
+<!--                                                    </h5>-->
+<!--                                                </li>-->
+<!--                                                <li class="li-bo-border">-->
+<!--                                                    <i-->
+<!--                                                            class="fa fa-handshake-o i-bo-pad fa-li-po pr8"/>-->
+<!--                                                    <a-->
+<!--                                                            href="https://www.ever-bs.com/products/crm">-->
+<!--                                                        CRM-->
+<!--                                                    </a>-->
+<!--                                                </li>-->
+<!--                                                <li class="li-bo-border">-->
+<!--                                                    <i-->
+<!--                                                            class="fa fa-line-chart i-bo-pad fa-li-po pr8"/>-->
+<!--                                                    <a-->
+<!--                                                            href="https://www.ever-bs.com/products/sales">-->
+<!--                                                        Sales-->
+<!--                                                    </a>-->
+<!--                                                </li>-->
+<!--                                                <li class="li-bo-border">-->
+<!--                                                    <i-->
+<!--                                                            class="fa  fa-usd i-bo-pad fa-li-po pr8"/>-->
+<!--                                                    <a-->
+<!--                                                            href="https://www.ever-bs.com/products/subscription">-->
+<!--                                                        Subscription-->
+<!--                                                    </a>-->
+<!--                                                </li>-->
+<!--                                                <li class="li-bo-border">-->
+<!--                                                    <i-->
+<!--                                                            class="fa fa-area-chart i-bo-pad fa-li-po pr8"/>-->
+<!--                                                    <a-->
+<!--                                                            href="https://www.ever-bs.com/products/marketing-automation">-->
+<!--                                                        Marketing Automation-->
+<!--                                                    </a>-->
+<!--                                                </li>-->
+<!--                                                <li class="li-bo-border">-->
+<!--                                                    <i-->
+<!--                                                            class="fa fa-tablet i-bo-pad fa-li-po pr8"/>-->
+<!--                                                    <a-->
+<!--                                                            href="https://www.ever-bs.com/products/events">-->
+<!--                                                        Events-->
+<!--                                                    </a>-->
+<!--                                                </li>-->
+<!--                                                <li class="li-bo-border">-->
+<!--                                                    <i-->
+<!--                                                            class="fa fa-server i-bo-pad fa-li-po pr8"/>-->
+<!--                                                    <a-->
+<!--                                                            href="https://www.ever-bs.com/products/survey">-->
+<!--                                                        Surveys-->
+<!--                                                    </a>-->
+<!--                                                </li>-->
+<!--                                                <li class="li-bo-border">-->
+
+<!--                                                </li>-->
+<!--                                                <li class="btm-li-border">-->
+<!--                                                    <h5>-->
+<!--                                                        <strong>-->
+<!--                                                            Productivity-->
+<!--                                                        </strong>-->
+<!--                                                    </h5>-->
+<!--                                                </li>-->
+<!--                                                <li class="li-bo-border">-->
+<!--                                                    <i-->
+<!--                                                            class="fa fa-globe i-bo-pad fa-li-po pr8"/>-->
+<!--                                                    <a-->
+<!--                                                            href="https://www.ever-bs.com/products/website">-->
+<!--                                                        Website-->
+<!--                                                    </a>-->
+<!--                                                </li>-->
+<!--                                                <li class="li-bo-border">-->
+<!--                                                    <i-->
+<!--                                                            class="fa fa-credit-card i-bo-pad fa-li-po pr8"/>-->
+<!--                                                    <a-->
+<!--                                                            href="https://www.ever-bs.com/products/e-commerce">-->
+<!--                                                        E-commerce-->
+<!--                                                    </a>-->
+<!--                                                </li>-->
+<!--                                                <li class="li-bo-border">-->
+<!--                                                    <i-->
+<!--                                                            class="fa fa-comment-o i-bo-pad fa-li-po pr8"/>-->
+<!--                                                    <a-->
+<!--                                                            href="https://www.ever-bs.com/products/communication">-->
+<!--                                                        Communication-->
+<!--                                                    </a>-->
+<!--                                                </li>-->
+<!--                                            </ul>-->
+<!--                                        </div>-->
+<!--                                        <div class="col-lg-4 ">-->
+<!--                                            <ul class="list-unstyled mb32">-->
+<!--                                                <li class="btm-li-border">-->
+<!--                                                    <h5>-->
+<!--                                                        <strong>-->
+<!--                                                            Product By Verticals-->
+<!--                                                        </strong>-->
+<!--                                                    </h5>-->
+<!--                                                </li>-->
+<!--                                                <li class="li-bo-border">-->
+<!--                                                    <i-->
+<!--                                                            class="fa fa-graduation-cap i-bo-pad fa-li-po pr8"/>-->
+<!--                                                    <a-->
+<!--                                                            href="https://www.ever-bs.com/products/education">-->
+<!--                                                        Education-->
+<!--                                                    </a>-->
+<!--                                                </li>-->
+<!--                                                     <li class="li-bo-border">-->
+<!--                                                    <i-->
+<!--                                                            class="fa fa-bed i-bo-pad fa-li-po pr8"/>-->
+<!--                                                    <a-->
+<!--                                                            href="https://www.ever-bs.com/products/hospitality">-->
+<!--                                                        Hospitality-->
+<!--                                                    </a>-->
+<!--                                                </li>-->
+<!--                                                <li class="li-bo-border">-->
+<!--                                                    <i-->
+<!--                                                            class="fa fa-sitemap i-bo-pad fa-li-po pr8"/>-->
+<!--                                                    <a-->
+<!--                                                            href="https://www.ever-bs.com/products/pos">-->
+<!--                                                        Retail &amp; POS-->
+<!--                                                    </a>-->
+<!--                                                </li>-->
+<!--                                                <li class="li-bo-border">-->
+<!--                                                    <i-->
+<!--                                                            class="fa fa-flag i-bo-pad fa-li-po pr8"/>-->
+<!--                                                    <a-->
+<!--                                                            href="https://www.ever-bs.com/products/government">-->
+<!--                                                        Government-->
+<!--                                                    </a>-->
+<!--                                                </li>-->
+<!--                                                <li class="li-bo-border">-->
+<!--                                                    <i-->
+<!--                                                            class="fa fa-medkit i-bo-pad fa-li-po pr8"/>-->
+<!--                                                    <a-->
+<!--                                                            href="https://www.ever-bs.com/products/healthcare">-->
+<!--                                                        Healthcare-->
+<!--                                                    </a>-->
+<!--                                                </li>-->
+<!--                                                <li class="li-bo-border">-->
+<!--                                                    <i-->
+<!--                                                            class="fa fa-industry i-bo-pad fa-li-po pr8"/>-->
+<!--                                                    <a-->
+<!--                                                            href="https://www.ever-bs.com/products/manufacturing">-->
+<!--                                                        Manufacturing-->
+<!--                                                    </a>-->
+<!--                                                </li>-->
+<!--                                                <li class="li-bo-border">-->
+<!--                                                    <i-->
+<!--                                                            class="fa fa-life-ring i-bo-pad fa-li-po pr8"/>-->
+<!--                                                    <a-->
+<!--                                                            href="https://www.ever-bs.com/products/insurance">-->
+<!--                                                        Insurance-->
+<!--                                                    </a>-->
+<!--                                                </li>-->
+<!--                                                <li class="li-bo-border">-->
+<!--                                                    <i-->
+<!--                                                            class="fa fa-building-o i-bo-pad fa-li-po pr8"/>-->
+<!--                                                    <a-->
+<!--                                                            href="https://www.ever-bs.com/products/property">-->
+<!--                                                        Property-->
+<!--                                                    </a>-->
+
+<!--                                                </li>-->
+
+<!--                                            </ul>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </ul>-->
+<!--            </li>-->
+<!--        </template>-->
+    </data>
+</odoo>
