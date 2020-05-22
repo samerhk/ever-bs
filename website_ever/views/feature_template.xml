@@ -5,7 +5,7 @@
 <!--            <xpath expr="//nav[hasclass('navbar','navbar-expand-md','navbar-light','bg-light')]" position="attributes">-->
 <!--                <attribute name="class">navbar navbar-expand-md navbar-light bg-light yamm</attribute>-->
 <!--            </xpath>-->
-            <xpath expr="//nav[hasclass('navbar','navbar-expand-md','navbar-light','bg-light')]/div" position="inside">
+            <xpath expr="//nav[hasclass('navbar','navbar-expand-md','navbar-light','bg-light')]/div/button" position="before">
                 <img src="/website_ever/static/src/img/odoo_gold.png" class="gold-logo"/>
             </xpath>
         </template>
@@ -15,31 +15,35 @@
                 <div class="oe_structure">
                     <div id="custom-pre-header">
                         <div class="container">
-                            <nav class="header-nav-top">
-                                <div id="social">
-                                    <a href="https://www.ever-bs.com/news" class="menu">
-                                        News
+                           <nav class="header-nav-top">
+                        <div >
+                            <div class="float-right" id="social">
+                                <a href="https://www.ever-bs.com/news" class="menu">News
                                     </a>
-                                    <a href="https://www.ever-bs.com/blog" class="menu">
+                                <a href="https://www.ever-bs.com/blog" class="menu">
                                         Blog
                                     </a>
-                                    <a href="https://www.ever-bs.com/contactus" class="menu">
+                                <a href="https://www.ever-bs.com/contactus" class="menu">
                                         Contact us
                                     </a>
-                                    <a href="https://www.ever-bs.com/helpdesk/" class="menu">
+                                <a href="https://www.ever-bs.com/helpdesk/" class="menu">
                                         Support
                                     </a>
-                                    <a href="https://www.facebook.com" target="_blank">
-                                        <i class="fa fa-facebook fa-1x img-circle"></i>
-                                    </a>
-                                    <a href="https://twitter.com" target="_blank">
-                                        <i class="fa fa-twitter fa-1x img-circle"></i>
-                                    </a>
-                                    <a href="https://plus.google.com/" target="_blank">
-                                        <i class="fa fa-google-plus fa-1x img-circle"></i>
-                                    </a>
-                                </div>
-                            </nav>
+                                <a href="https://www.facebook.com" target="_blank">
+                                    <i class="fa fa-facebook fa-1x img-circle"/>
+                                </a>
+                                <a href="https://twitter.com" target="_blank">
+                                    <i class="fa fa-twitter fa-1x img-circle"/>
+                                </a>
+                                <a href="https://plus.google.com/" target="_blank">
+                                    <i class="fa fa-google-plus fa-1x img-circle"/>
+                                </a>
+                            </div>
+                            <a href="/" class="navbar-brand logo">
+                                <span t-field="website.logo" t-options="{'widget': 'image'}" role="img" t-att-aria-label="'Logo of %s' % website.name" t-att-title="website.name"/>
+                            </a>
+                        </div>
+                    </nav>
                         </div>
                     </div>
                 </div>
