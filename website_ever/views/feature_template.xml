@@ -13,11 +13,11 @@
         <template id="top_navbar_mid_menu" inherit_id="website.layout" name="Header Layout Menu">
             <xpath expr="//nav[hasclass('navbar','navbar-expand-md','navbar-light','bg-light')]" position="before">
                 <div class="oe_structure">
+                    <div class="container" id="top_nav">
                     <div id="custom-pre-header">
-                        <div class="container">
                            <nav class="header-nav-top">
-                        <div class="d-flex justify-content-end">
-                            <div class="col-md-5" id="social">
+                        <div class="d-flex justify-content-end " style="line-height: 3;">
+                            <div class="col-md-5 d-flex justify-content-around" id="social">
                                 <a href="https://www.ever-bs.com/news" class="menu">News
                                     </a>
                                 <a href="https://www.ever-bs.com/blog" class="menu">
