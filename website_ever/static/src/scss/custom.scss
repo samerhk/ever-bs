@@ -64,10 +64,21 @@
 //   //text-align: left;
 // }
 
+@media (max-width: 768px) {
+    #custom-pre-header{
+        display:none;
+    }
+}
+
 #custom-pre-header .header-nav-top .social {
 padding: 6px 10px;
 display: inline-block;
 }
+
+#top_nav  {
+    max-width: 90%;
+    }
+
 
 #social > a .fa {
 color: #00af8d;
