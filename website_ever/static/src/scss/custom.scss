@@ -77,11 +77,12 @@ display: inline-block;
 
 #top_nav  {
     max-width: 90%;
+    line-height: 3px;
     }
 
 
 #social > a .fa {
-color: #00af8d;
+color: #5c5a5a;
 //background-color: #fff;
 font-size: 14px;
 border: 2px solid transparent;
@@ -94,7 +95,7 @@ text-decoration: none;
 
 
 #social > a.menu {
-color:#00af8d;
+color:#5c5a5a;
 //background-color: #fff;
 font-size: 14px;
 border: 2px solid transparent;
@@ -107,7 +108,7 @@ text-decoration: none;
 }
 
 #social a:hover {
-color: #23527c;
+color: #00af8d;
 text-decoration: none;
 }
 
