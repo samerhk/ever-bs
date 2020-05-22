@@ -5,9 +5,9 @@
 <!--            <xpath expr="//nav[hasclass('navbar','navbar-expand-md','navbar-light','bg-light')]" position="attributes">-->
 <!--                <attribute name="class">navbar navbar-expand-md navbar-light bg-light yamm</attribute>-->
 <!--            </xpath>-->
-            <xpath expr="//nav[hasclass('navbar','navbar-expand-md','navbar-light','bg-light')]/div/button" position="before">
+            <!-- <xpath expr="//nav[hasclass('navbar','navbar-expand-md','navbar-light','bg-light')]/div/button" position="before">
                 <img src="/website_ever/static/src/img/odoo_gold.png" class="gold-logo"/>
-            </xpath>
+            </xpath> -->
         </template>
 
         <template id="top_navbar_mid_menu" inherit_id="website.layout" name="Header Layout Menu">
@@ -39,9 +39,9 @@
                                     <i class="fa fa-google-plus fa-1x img-circle"/>
                                 </a>
                             </div>
-                            <a href="/" class="navbar-brand logo">
+                            <!-- <a href="/" class="navbar-brand logo">
                                 <span t-field="website.logo" t-options="{'widget': 'image'}" role="img" t-att-aria-label="'Logo of %s' % website.name" t-att-title="website.name"/>
-                            </a>
+                            </a> -->
                         </div>
                     </nav>
                         </div>
